@@ -1,9 +1,8 @@
 (function () {
-  // Marcar link ativo no menu
+  // Link ativo no menu
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav a").forEach(a => {
-    const href = a.getAttribute("href");
-    if (href === path) a.classList.add("active");
+    if (a.getAttribute("href") === path) a.classList.add("active");
   });
 
   // Transição suave ao navegar
@@ -15,18 +14,25 @@
 
       e.preventDefault();
       if (page) page.classList.add("is-exiting");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 180);
+      setTimeout(() => window.location.href = href, 220);
     });
   });
 
-  // PDF (print)
+  // PDF
   const pdfBtn = document.getElementById("btnPdf");
   if (pdfBtn) pdfBtn.addEventListener("click", () => window.print());
 
-  // Ano automático
+  // Ano
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
+
+  // WhatsApp (editar o número)
+  const wa = document.querySelectorAll("[data-wa]");
+  wa.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const phone = btn.getAttribute("data-phone") || "55SEUNUMEROAQUI";
+      const text = encodeURIComponent(btn.getAttribute("data-text") || "Olá, gostaria de agendar um atendimento.");
+      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    });
+  });
 })();
