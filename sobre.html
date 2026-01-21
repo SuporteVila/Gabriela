@@ -2,62 +2,64 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sobre • Gabriela Cordeiro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <header class="header-center">
+    <a href="index.html" class="logo-center" data-nav="true" aria-label="Home">
+      <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" />
+    </a>
+
+    <nav class="nav-center">
+      <a href="index.html" class="nav-item" data-nav="true">Home</a>
+      <a href="sobre.html" class="nav-item active" data-nav="true">Sobre</a>
+      <a href="educacao.html" class="nav-item" data-nav="true">Educação</a>
+      <a href="experiencia.html" class="nav-item" data-nav="true">Experiência</a>
+      <a href="contato.html" class="nav-item" data-nav="true">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-gold" data-action="pdf">Salvar em PDF</button>
+      <button class="btn btn-marsala" data-action="agendar">Agendar atendimento</button>
+    </div>
+  </header>
+
   <div class="container">
-    <header class="header">
-      <div class="brand">
-        <a href="index.html" data-nav="true" class="brand-logo">
-          <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" class="brand-logo-img">
-        </a>
-      </div>
-
-      <nav class="nav">
-        <a href="index.html" data-nav="true">Home</a>
-        <a href="sobre.html" data-nav="true">Sobre</a>
-        <a href="educacao.html" data-nav="true">Educação</a>
-        <a href="experiencia.html" data-nav="true">Experiência</a>
-        <a href="contato.html" data-nav="true">Contato</a>
-      </nav>
-
-      <div class="top-actions">
-        <button class="btn" onclick="salvarPDF()">Salvar em PDF</button>
-        <a class="btn primary" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">Agendar atendimento</a>
-      </div>
-    </header>
-
-    <section class="main-card">
-      <h1 class="page-title">Sobre</h1>
-      <p class="p">
-        Perfil profissional com foco em atendimento humanizado, postura estratégica e comunicação clara.
-        Personalize aqui com a biografia da Dra. Gabriela Cordeiro, valores do escritório e proposta de atuação.
+    <main class="page card">
+      <div class="pill">Sobre • Perfil profissional</div>
+      <h1>Atuação pautada em ética, técnica e acolhimento.</h1>
+      <p>
+        Escreva aqui o texto da advogada: visão de atuação, valores, como conduz o atendimento e diferenciais.
+        O ideal é um texto direto, profissional e humano.
       </p>
 
-      <h2 class="section-title">Diferenciais</h2>
-      <div class="cards">
-        <div class="mini-card">
-          <p class="mini-title">Atendimento consultivo</p>
-          <p class="mini-text">Orientação objetiva, alinhando expectativas e caminhos possíveis.</p>
+      <div class="hr"></div>
+
+      <h2>Diferenciais</h2>
+      <div class="area-cards">
+        <div class="area-card">
+          <div class="area-title">Atendimento humanizado</div>
+          <p class="area-desc">Escuta ativa, clareza e orientação prática para cada caso.</p>
         </div>
-        <div class="mini-card">
-          <p class="mini-title">Comunicação clara</p>
-          <p class="mini-text">Explicações acessíveis e acompanhamento de cada etapa.</p>
+        <div class="area-card">
+          <div class="area-title">Estratégia jurídica</div>
+          <p class="area-desc">Análise de riscos, alternativas e condução técnica do processo.</p>
         </div>
-        <div class="mini-card">
-          <p class="mini-title">Negociação</p>
-          <p class="mini-text">Busca por soluções eficientes e acordos bem estruturados.</p>
+        <div class="area-card">
+          <div class="area-title">Comunicação objetiva</div>
+          <p class="area-desc">Explicações claras e alinhamento de expectativas.</p>
         </div>
-        <div class="mini-card">
-          <p class="mini-title">Ética e confiança</p>
-          <p class="mini-text">Condução responsável e sigilo profissional.</p>
+        <div class="area-card">
+          <div class="area-title">Negociação e acordos</div>
+          <p class="area-desc">Busca por soluções eficientes quando possível.</p>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">© 2026 • Gabriela Cordeiro</footer>
+      <footer>© 2026 • Gabriela Cordeiro</footer>
+    </main>
   </div>
 
   <script src="app.js"></script>
