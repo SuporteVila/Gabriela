@@ -2,57 +2,60 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Experiência • Gabriela Cordeiro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <header class="header-center">
+    <a href="index.html" class="logo-center" data-nav="true" aria-label="Home">
+      <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" />
+    </a>
+
+    <nav class="nav-center">
+      <a href="index.html" class="nav-item" data-nav="true">Home</a>
+      <a href="sobre.html" class="nav-item" data-nav="true">Sobre</a>
+      <a href="educacao.html" class="nav-item" data-nav="true">Educação</a>
+      <a href="experiencia.html" class="nav-item active" data-nav="true">Experiência</a>
+      <a href="contato.html" class="nav-item" data-nav="true">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-gold" data-action="pdf">Salvar em PDF</button>
+      <button class="btn btn-marsala" data-action="agendar">Agendar atendimento</button>
+    </div>
+  </header>
+
   <div class="container">
-    <header class="header">
-      <div class="brand">
-        <a href="index.html" data-nav="true" class="brand-logo">
-          <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" class="brand-logo-img">
-        </a>
-      </div>
+    <main class="page card">
+      <div class="pill">Experiência</div>
+      <h1>Atuação e histórico profissional</h1>
+      <p>Descreva experiências: escritório, consultoria, jurídico, contencioso, negociação e resultados.</p>
 
-      <nav class="nav">
-        <a href="index.html" data-nav="true">Home</a>
-        <a href="sobre.html" data-nav="true">Sobre</a>
-        <a href="educacao.html" data-nav="true">Educação</a>
-        <a href="experiencia.html" data-nav="true">Experiência</a>
-        <a href="contato.html" data-nav="true">Contato</a>
-      </nav>
+      <div class="hr"></div>
 
-      <div class="top-actions">
-        <button class="btn" onclick="salvarPDF()">Salvar em PDF</button>
-        <a class="btn primary" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">Agendar atendimento</a>
-      </div>
-    </header>
-
-    <section class="main-card">
-      <h1 class="page-title">Experiência</h1>
-      <p class="p">Adicione escritório, atuação, estágio, consultoria e casos (sem expor dados sensíveis).</p>
-
-      <div class="list">
-        <div class="item">
-          <div class="top">
-            <div class="role">Gabriela Cordeiro • Advocacia e Consultoria</div>
-            <div class="meta">Cargo • Período</div>
-          </div>
-          <p>Descrição objetiva das atividades, perfis de demandas e entregas relevantes.</p>
+      <div class="area-cards">
+        <div class="area-card">
+          <div class="area-title">Cargo / Função</div>
+          <p class="area-desc">Local • Período • Principais atividades e entregas.</p>
         </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="role">Experiência anterior</div>
-            <div class="meta">Local • Período</div>
-          </div>
-          <p>Breve descrição das responsabilidades e resultados.</p>
+        <div class="area-card">
+          <div class="area-title">Atuação consultiva</div>
+          <p class="area-desc">Elaboração de pareceres, contratos, orientações preventivas.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-title">Contencioso</div>
+          <p class="area-desc">Acompanhamento processual, estratégias e audiências.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-title">Negociação</div>
+          <p class="area-desc">Acordos e soluções efetivas para reduzir desgaste e tempo.</p>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">© 2026 • Gabriela Cordeiro</footer>
+      <footer>© 2026 • Gabriela Cordeiro</footer>
+    </main>
   </div>
 
   <script src="app.js"></script>
