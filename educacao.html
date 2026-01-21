@@ -2,65 +2,60 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Educação • Gabriela Cordeiro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <header class="header-center">
+    <a href="index.html" class="logo-center" data-nav="true" aria-label="Home">
+      <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" />
+    </a>
+
+    <nav class="nav-center">
+      <a href="index.html" class="nav-item" data-nav="true">Home</a>
+      <a href="sobre.html" class="nav-item" data-nav="true">Sobre</a>
+      <a href="educacao.html" class="nav-item active" data-nav="true">Educação</a>
+      <a href="experiencia.html" class="nav-item" data-nav="true">Experiência</a>
+      <a href="contato.html" class="nav-item" data-nav="true">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-gold" data-action="pdf">Salvar em PDF</button>
+      <button class="btn btn-marsala" data-action="agendar">Agendar atendimento</button>
+    </div>
+  </header>
+
   <div class="container">
-    <header class="header">
-      <div class="brand">
-        <a href="index.html" data-nav="true" class="brand-logo">
-          <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" class="brand-logo-img">
-        </a>
-      </div>
+    <main class="page card">
+      <div class="pill">Formação</div>
+      <h1>Educação e aperfeiçoamento</h1>
+      <p>Liste aqui graduação, pós-graduação, cursos, certificações e eventos relevantes.</p>
 
-      <nav class="nav">
-        <a href="index.html" data-nav="true">Home</a>
-        <a href="sobre.html" data-nav="true">Sobre</a>
-        <a href="educacao.html" data-nav="true">Educação</a>
-        <a href="experiencia.html" data-nav="true">Experiência</a>
-        <a href="contato.html" data-nav="true">Contato</a>
-      </nav>
+      <div class="hr"></div>
 
-      <div class="top-actions">
-        <button class="btn" onclick="salvarPDF()">Salvar em PDF</button>
-        <a class="btn primary" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">Agendar atendimento</a>
-      </div>
-    </header>
-
-    <section class="main-card">
-      <h1 class="page-title">Educação</h1>
-      <p class="p">Inclua graduação, pós, cursos, certificações e eventos relevantes.</p>
-
-      <div class="list">
-        <div class="item">
-          <div class="top">
-            <div class="role">Graduação em Direito</div>
-            <div class="meta">Instituição • Ano</div>
-          </div>
-          <p>Breve descrição (áreas de interesse, TCC, projetos, etc.).</p>
+      <div class="area-cards">
+        <div class="area-card">
+          <div class="area-title">Graduação</div>
+          <p class="area-desc">Direito • Instituição • Ano</p>
         </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="role">Pós-graduação / Especialização</div>
-            <div class="meta">Instituição • Ano</div>
-          </div>
-          <p>Breve descrição do foco e resultados.</p>
+        <div class="area-card">
+          <div class="area-title">Pós-graduação</div>
+          <p class="area-desc">Área • Instituição • Ano</p>
         </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="role">Cursos e Certificações</div>
-            <div class="meta">Atualizações</div>
-          </div>
-          <p>Liste cursos, congressos e formações complementares.</p>
+        <div class="area-card">
+          <div class="area-title">Cursos e extensão</div>
+          <p class="area-desc">Temas relevantes (família, cível, contratos, mediação, etc.).</p>
+        </div>
+        <div class="area-card">
+          <div class="area-title">Eventos</div>
+          <p class="area-desc">Congressos, palestras e participação profissional.</p>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">© 2026 • Gabriela Cordeiro</footer>
+      <footer>© 2026 • Gabriela Cordeiro</footer>
+    </main>
   </div>
 
   <script src="app.js"></script>
