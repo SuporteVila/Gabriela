@@ -2,75 +2,62 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre | Gabriela Cordeiro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre • Gabriela Cordeiro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container page">
-
-    <div class="header">
-     <div class="brand">
-  <a href="index.html" data-nav="true" class="brand-logo">
-    <img src="marca.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" class="brand-logo-img">
-  </a>
-</div>
-
-
-      <div class="actions">
-        <button class="btn" id="btnPdf" type="button">Salvar em PDF</button>
-        <button class="btn secondary" type="button"
-          data-wa data-phone="55SEUNUMEROAQUI"
-          data-text="Olá, Dra. Gabriela! Gostaria de agendar um atendimento.">
-          Agendar atendimento
-        </button>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <a href="index.html" data-nav="true">Home</a>
-      <a href="sobre.html" data-nav="true">Sobre</a>
-      <a href="educacao.html" data-nav="true">Educação</a>
-      <a href="experiencia.html" data-nav="true">Experiência</a>
-      <a href="contato.html" data-nav="true">Contato</a>
-    </nav>
-
-    <div class="card" style="margin-top:14px;">
-      <h3 class="section-title">Quem sou</h3>
-      <div class="item">
-        <div class="top">
-          <div class="title">Gabriela Cordeiro</div>
-          <div class="meta">Advogada • Cuiabá/MT</div>
-        </div>
-        <p>
-          Escreva aqui um texto institucional sobre você: sua abordagem, valores,
-          como atende clientes e o que diferencia sua atuação.
-        </p>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <a href="index.html" data-nav="true" class="brand-logo">
+          <img src="image.png" alt="Gabriela Cordeiro - Advocacia e Consultoria" class="brand-logo-img">
+        </a>
       </div>
 
-      <hr class="sep" />
+      <nav class="nav">
+        <a href="index.html" data-nav="true">Home</a>
+        <a href="sobre.html" data-nav="true">Sobre</a>
+        <a href="educacao.html" data-nav="true">Educação</a>
+        <a href="experiencia.html" data-nav="true">Experiência</a>
+        <a href="contato.html" data-nav="true">Contato</a>
+      </nav>
 
-      <h3 class="section-title">Missão e valores</h3>
-      <div class="list">
-        <div class="item">
-          <div class="top">
-            <div class="title">Missão</div>
-            <div class="meta">Atendimento com clareza e estratégia</div>
-          </div>
-          <p>Defina sua missão profissional de forma curta e forte.</p>
+      <div class="top-actions">
+        <button class="btn" onclick="salvarPDF()">Salvar em PDF</button>
+        <a class="btn primary" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">Agendar atendimento</a>
+      </div>
+    </header>
+
+    <section class="main-card">
+      <h1 class="page-title">Sobre</h1>
+      <p class="p">
+        Perfil profissional com foco em atendimento humanizado, postura estratégica e comunicação clara.
+        Personalize aqui com a biografia da Dra. Gabriela Cordeiro, valores do escritório e proposta de atuação.
+      </p>
+
+      <h2 class="section-title">Diferenciais</h2>
+      <div class="cards">
+        <div class="mini-card">
+          <p class="mini-title">Atendimento consultivo</p>
+          <p class="mini-text">Orientação objetiva, alinhando expectativas e caminhos possíveis.</p>
         </div>
-
-        <div class="item">
-          <div class="top">
-            <div class="title">Valores</div>
-            <div class="meta">Ética • Transparência • Excelência</div>
-          </div>
-          <p>Liste valores que combinam com seu escritório.</p>
+        <div class="mini-card">
+          <p class="mini-title">Comunicação clara</p>
+          <p class="mini-text">Explicações acessíveis e acompanhamento de cada etapa.</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-title">Negociação</p>
+          <p class="mini-text">Busca por soluções eficientes e acordos bem estruturados.</p>
+        </div>
+        <div class="mini-card">
+          <p class="mini-title">Ética e confiança</p>
+          <p class="mini-text">Condução responsável e sigilo profissional.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">© <span id="year"></span> • Gabriela Cordeiro</div>
+    <footer class="footer">© 2026 • Gabriela Cordeiro</footer>
   </div>
 
   <script src="app.js"></script>
