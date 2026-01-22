@@ -30,7 +30,7 @@ body{
   margin: 0 auto 40px;
 }
 
-/* ===== Page transition (suave) ===== */
+/* ===== Transição suave ===== */
 .page{
   opacity:0;
   transform: translateY(10px);
@@ -67,14 +67,14 @@ body{
   background: rgba(0,0,0,.18);
 }
 .logo-center img{
-  height: 64px;      /* ajuste aqui se quiser maior */
+  height: 64px;
   width:auto;
-  max-width: 360px;
+  max-width: 420px;
   object-fit: contain;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));
 }
 
-/* Menu abaixo */
+/* Menu */
 .nav-center{
   display:flex;
   gap: 12px;
@@ -102,7 +102,7 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
-/* Botões (PDF + Agendar) */
+/* Botões */
 .header-actions{
   display:flex;
   gap: 10px;
@@ -139,7 +139,7 @@ body{
   background: linear-gradient(180deg, rgba(94,8,33,.55), rgba(0,0,0,.15));
 }
 
-/* ===== Cards ===== */
+/* ===== Conteúdo ===== */
 .card{
   border-radius: 22px;
   border: 1px solid var(--border);
@@ -171,6 +171,7 @@ body{
 h1,h2,h3{ margin: 0 0 10px; }
 h1{ font-size: clamp(28px, 3.2vw, 44px); line-height: 1.08; }
 h2{ font-size: 22px; margin-top: 18px; }
+h3{ font-size: 18px; margin-top: 6px; }
 p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
 
 .hr{
@@ -199,7 +200,7 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   border-color: rgba(245,218,137,.26);
 }
 .area-title{
-  font-weight: 750;
+  font-weight: 780;
   color: rgba(255,255,255,.92);
   margin-bottom: 6px;
 }
@@ -209,6 +210,7 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   margin:0;
 }
 
+/* Lado direito (Home) */
 .side{
   border-radius: 22px;
   border: 1px solid rgba(245,218,137,.18);
@@ -232,7 +234,33 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   font-size: 12px;
 }
 
-/* ===== Footer ===== */
+/* Lista elegante */
+.list{
+  display:grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+.list-item{
+  border-radius: 16px;
+  border: 1px solid rgba(245,218,137,.14);
+  background: rgba(0,0,0,.14);
+  padding: 12px 14px;
+}
+.list-item strong{
+  color: rgba(255,255,255,.92);
+}
+
+/* Links */
+a.link{
+  color: rgba(245,218,137,.92);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(245,218,137,.35);
+}
+a.link:hover{
+  border-bottom-color: rgba(245,218,137,.75);
+}
+
+/* Footer */
 footer{
   text-align:center;
   opacity: .75;
@@ -240,25 +268,25 @@ footer{
   color: rgba(243,240,239,.75);
 }
 
-/* ===== Responsivo ===== */
+/* Responsivo */
 @media(max-width: 920px){
   .grid{ grid-template-columns: 1fr; }
   .area-cards{ grid-template-columns: 1fr; }
 }
 
 @media(max-width: 520px){
-  .logo-center img{ height: 54px; max-width: 260px; }
+  .logo-center img{ height: 54px; max-width: 280px; }
   .card{ padding: 18px; }
 }
 
-/* ===== Impressão (PDF) ===== */
+/* PDF/Impressão */
 @media print{
   body{
     background:#fff !important;
     color:#000 !important;
   }
   .header-center, .header-actions{ display:none !important; }
-  .card, .side, .area-card{
+  .card, .side, .area-card, .list-item{
     background:#fff !important;
     border: 1px solid #ddd !important;
     box-shadow:none !important;
