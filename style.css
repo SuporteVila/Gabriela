@@ -8,7 +8,7 @@
   --text:#f3f0ef;
   --muted:rgba(243,240,239,.78);
   --border:rgba(245,218,137,.18);
-  --border2:rgba(245,218,137,.28);
+  --border2:rgba(245,218,137,.30);
   --shadow:rgba(0,0,0,.55);
 }
 
@@ -24,7 +24,6 @@ body{
     linear-gradient(180deg, var(--bg1), var(--bg2));
 }
 
-/* ===== Layout ===== */
 .container{
   width:min(1100px, calc(100% - 32px));
   margin: 0 auto 40px;
@@ -102,7 +101,7 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
-/* Botões */
+/* Linha de ações (PDF + Agendar + Idiomas) */
 .header-actions{
   display:flex;
   gap: 10px;
@@ -111,6 +110,7 @@ body{
   align-items:center;
 }
 
+/* Botões base */
 .btn{
   appearance:none;
   border: 1px solid var(--border);
@@ -139,7 +139,29 @@ body{
   background: linear-gradient(180deg, rgba(94,8,33,.55), rgba(0,0,0,.15));
 }
 
-/* ===== Conteúdo ===== */
+/* Seletor de idioma */
+.langbar{
+  display:flex;
+  gap:8px;
+  padding:6px;
+  border-radius: 999px;
+  border:1px solid rgba(245,218,137,.14);
+  background: rgba(0,0,0,.14);
+}
+.langbtn{
+  padding:8px 10px;
+  border-radius: 999px;
+  border:1px solid transparent;
+  background: transparent;
+  color: rgba(255,255,255,.88);
+  cursor:pointer;
+  font-weight: 700;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.langbtn:hover{ transform: translateY(-1px); background: rgba(94,8,33,.22); border-color: rgba(245,218,137,.16); }
+.langbtn.is-active{ background: rgba(94,8,33,.40); border-color: rgba(245,218,137,.28); color:#fff; }
+
+/* Conteúdo */
 .card{
   border-radius: 22px;
   border: 1px solid var(--border);
@@ -164,7 +186,7 @@ body{
   border: 1px solid var(--border);
   background: rgba(0,0,0,.18);
   color: rgba(245,218,137,.92);
-  font-weight: 650;
+  font-weight: 700;
   width: fit-content;
 }
 
@@ -172,7 +194,7 @@ h1,h2,h3{ margin: 0 0 10px; }
 h1{ font-size: clamp(28px, 3.2vw, 44px); line-height: 1.08; }
 h2{ font-size: 22px; margin-top: 18px; }
 h3{ font-size: 18px; margin-top: 6px; }
-p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+p{ margin: 0 0 12px; color: var(--muted); line-height: 1.65; }
 
 .hr{
   height:1px;
@@ -187,7 +209,6 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   gap: 12px;
   margin-top: 10px;
 }
-
 .area-card{
   border-radius: 18px;
   border: 1px solid rgba(245,218,137,.14);
@@ -200,23 +221,47 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   border-color: rgba(245,218,137,.26);
 }
 .area-title{
-  font-weight: 780;
-  color: rgba(255,255,255,.92);
+  font-weight: 800;
+  color: rgba(255,255,255,.94);
   margin-bottom: 6px;
 }
 .area-desc{
   color: rgba(243,240,239,.78);
-  line-height: 1.45;
+  line-height: 1.5;
   margin:0;
 }
 
-/* Lado direito (Home) */
+/* ===== Home: bloco da direita mais chique ===== */
 .side{
   border-radius: 22px;
   border: 1px solid rgba(245,218,137,.18);
-  background: radial-gradient(700px 380px at 0% 0%, rgba(94,8,33,.45), rgba(0,0,0,.14));
+  background:
+    radial-gradient(700px 380px at 0% 0%, rgba(94,8,33,.55), rgba(0,0,0,.14));
   padding: 18px;
 }
+.side .kicker{
+  font-weight: 850;
+  letter-spacing: .2px;
+  color: rgba(245,218,137,.92);
+  margin-bottom: 6px;
+}
+.sidebox{
+  border-radius: 18px;
+  border: 1px solid rgba(245,218,137,.14);
+  background: rgba(0,0,0,.14);
+  padding: 14px;
+  margin-top: 10px;
+}
+.row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(245,218,137,.10);
+}
+.row:last-child{ border-bottom:none; }
+.row .label{ color: rgba(243,240,239,.72); font-weight: 650; }
+.row .value{ color: rgba(255,255,255,.92); font-weight: 750; text-align:right; }
 
 .badges{
   display:flex;
@@ -230,11 +275,17 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   border: 1px solid rgba(245,218,137,.14);
   background: rgba(0,0,0,.14);
   color: rgba(255,255,255,.86);
-  font-weight: 650;
+  font-weight: 700;
   font-size: 12px;
 }
 
-/* Lista elegante */
+a.link{
+  color: rgba(245,218,137,.92);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(245,218,137,.35);
+}
+a.link:hover{ border-bottom-color: rgba(245,218,137,.75); }
+
 .list{
   display:grid;
   gap: 10px;
@@ -246,19 +297,7 @@ p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
   background: rgba(0,0,0,.14);
   padding: 12px 14px;
 }
-.list-item strong{
-  color: rgba(255,255,255,.92);
-}
-
-/* Links */
-a.link{
-  color: rgba(245,218,137,.92);
-  text-decoration: none;
-  border-bottom: 1px dashed rgba(245,218,137,.35);
-}
-a.link:hover{
-  border-bottom-color: rgba(245,218,137,.75);
-}
+.list-item strong{ color: rgba(255,255,255,.94); }
 
 /* Footer */
 footer{
@@ -273,20 +312,51 @@ footer{
   .grid{ grid-template-columns: 1fr; }
   .area-cards{ grid-template-columns: 1fr; }
 }
-
 @media(max-width: 520px){
   .logo-center img{ height: 54px; max-width: 280px; }
   .card{ padding: 18px; }
 }
 
+/* ===== Modal idioma ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+.modal.show{ display:flex; }
+.modal-card{
+  width: min(520px, calc(100% - 32px));
+  border-radius: 22px;
+  border: 1px solid rgba(245,218,137,.22);
+  background: linear-gradient(180deg, rgba(94,8,33,.52), rgba(0,0,0,.22));
+  box-shadow: 0 22px 80px rgba(0,0,0,.65);
+  padding: 18px;
+}
+.modal-title{
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 6px;
+}
+.modal-sub{
+  margin: 0 0 14px;
+  color: rgba(243,240,239,.78);
+}
+.modal-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
 /* PDF/Impressão */
 @media print{
-  body{
-    background:#fff !important;
-    color:#000 !important;
-  }
-  .header-center, .header-actions{ display:none !important; }
-  .card, .side, .area-card, .list-item{
+  body{ background:#fff !important; color:#000 !important; }
+  .header-center, .header-actions, .modal{ display:none !important; }
+  .card, .side, .area-card, .list-item, .sidebox{
     background:#fff !important;
     border: 1px solid #ddd !important;
     box-shadow:none !important;
